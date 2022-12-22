@@ -71,6 +71,7 @@ void PlayableCharacter::update(float elapsedTime)
 	{
 		m_Position.y += m_Gravity * elapsedTime;
 	}
+	//Temporary object to split up whole object to parts
 	sf::FloatRect r = getPosition();
 
 	//Feet
