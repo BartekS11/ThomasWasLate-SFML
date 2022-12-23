@@ -14,7 +14,7 @@ bool Thomas::handleInput()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
-		if (!m_IsFalling && m_IsJumping)
+		if (!m_IsJumping && !m_IsFalling)
 		{
 			m_IsJumping = true;
 			m_TimeThisJump = 0;
@@ -29,19 +29,19 @@ bool Thomas::handleInput()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
-		m_LeftPressed = true;
+		Thomas::m_LeftPressed = true;
 	}
 	else
 	{
-		m_LeftPressed = false;
+		Thomas::m_LeftPressed = false;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
-		m_RightPressed = true;
+		Thomas::m_RightPressed = true;
 	}
 	else
 	{
-		m_RightPressed = false;
+		Thomas::m_RightPressed = false;
 	}
 
 	return m_JustJumped;

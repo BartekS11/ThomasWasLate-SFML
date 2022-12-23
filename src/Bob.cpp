@@ -15,7 +15,7 @@ bool Bob::handleInput()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
-		if (!m_IsFalling && m_IsJumping)
+		if (!m_IsJumping && !m_IsFalling)
 		{
 			m_IsJumping = true;
 			m_TimeThisJump = 0;
@@ -30,19 +30,19 @@ bool Bob::handleInput()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
-		m_LeftPressed = true;
+		Bob::m_LeftPressed = true;
 	}
 	else
 	{
-		m_LeftPressed = false;
+		Bob::m_LeftPressed = false;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
-		m_RightPressed = true;
+		Bob::m_RightPressed = true;
 	}
 	else
 	{
-		m_RightPressed = false;
+		Bob::m_RightPressed = false;
 	}
 
 	return m_JustJumped;

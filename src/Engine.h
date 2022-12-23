@@ -2,11 +2,17 @@
 #include <SFML/Graphics.hpp>
 #include "TextureHolder.h"
 #include "Constants.h"
+#include "Bob.h"
+#include "Thomas.h"
+
 
 class Engine
 {
 private:
 	TextureHolder th;
+
+	Thomas m_Thomas;
+	Bob m_Bob;
 
 	sf::RenderWindow m_Window;
 
