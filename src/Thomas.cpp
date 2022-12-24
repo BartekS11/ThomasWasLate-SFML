@@ -5,7 +5,7 @@ Thomas::Thomas()
 {
 	thomasTexture = TextureHolder::GetTexture("graphics/thomas.png");
 	m_Sprite = sf::Sprite(thomasTexture);
-	m_JumpDuration = .45;
+	m_JumpDuration = .45f;
 }
 
 bool Thomas::handleInput()

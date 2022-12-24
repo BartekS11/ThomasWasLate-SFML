@@ -6,7 +6,7 @@ Bob::Bob()
 	bobTexture = TextureHolder::GetTexture("graphics/bob.png");
 	m_Sprite = sf::Sprite(bobTexture);
 
-	m_JumpDuration = .25;
+	m_JumpDuration = .25f;
 }
 
 bool Bob::handleInput()
@@ -18,7 +18,7 @@ bool Bob::handleInput()
 		if (!m_IsJumping && !m_IsFalling)
 		{
 			m_IsJumping = true;
-			m_TimeThisJump = 0;
+			m_TimeThisJump = 0.f;
 			m_JustJumped = true;
 		}
 	}

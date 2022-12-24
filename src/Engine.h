@@ -4,7 +4,7 @@
 #include "Constants.h"
 #include "Bob.h"
 #include "Thomas.h"
-
+#include "LevelManager.h"
 
 class Engine
 {
@@ -13,6 +13,8 @@ private:
 
 	Thomas m_Thomas;
 	Bob m_Bob;
+
+	LevelManager m_LM;
 
 	sf::RenderWindow m_Window;
 
@@ -38,9 +40,14 @@ private:
 
 	bool m_NewLevelRequired = true;
 	
+	sf::VertexArray m_VALevel;
+	int** m_ArrayLevel = nullptr;
+	sf::Texture m_TextureTiles;
+
 	void input();
 	void update(float dtAsSeconds);
 	void draw();
+	void loadLevel();
 
 public:
 	Engine();
