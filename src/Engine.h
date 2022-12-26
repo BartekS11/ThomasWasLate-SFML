@@ -6,6 +6,7 @@
 #include "Thomas.h"
 #include "LevelManager.h"
 #include "SoundManager.h"
+#include "HUD.h"
 
 class Engine
 {
@@ -18,6 +19,10 @@ private:
 	LevelManager m_LM;
 
 	SoundManager m_SM;
+
+	Hud m_Hud;
+	int m_FramesSinceLastHudUpdate = 0;
+	int m_TargetFramesPerHUDUpdate = 500;
 
 	sf::RenderWindow m_Window;
 

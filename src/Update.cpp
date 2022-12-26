@@ -67,4 +67,19 @@ void Engine::update(float dtAsSeconds)
 			m_MainView.setCenter(m_Bob.getCenter());
 		}
 	}
+	m_FramesSinceLastHudUpdate++;
+
+	if (m_FramesSinceLastHudUpdate > m_TargetFramesPerHUDUpdate)
+	{
+		std::stringstream ssTime;
+		std::stringstream ssLevel;
+
+		ssTime << static_cast<int>(m_TimeRemaining);
+		m_Hud.setTime(ssTime.str());
+
+		ssLevel << "Level: " << m_LM.getCurrentLevel();
+		m_Hud.setLevel(ssLevel.str());
+
+		m_FramesSinceLastHudUpdate = 0;
+	}
 }
