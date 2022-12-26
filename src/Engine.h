@@ -5,6 +5,7 @@
 #include "Bob.h"
 #include "Thomas.h"
 #include "LevelManager.h"
+#include "SoundManager.h"
 
 class Engine
 {
@@ -15,6 +16,8 @@ private:
 	Bob m_Bob;
 
 	LevelManager m_LM;
+
+	SoundManager m_SM;
 
 	sf::RenderWindow m_Window;
 
@@ -49,9 +52,13 @@ private:
 	void draw();
 	void loadLevel();
 
-	//Polimorphic method, can pass bob and thomas
+	//Polimorphic method, can pass bob or thomas
 	bool detectCollisions(PlayableCharacter& character);
 
+	void populateEmmiters(std::vector<sf::Vector2f>& vSoundEmitters,
+		int** arrayLevel);
+
+	std::vector<sf::Vector2f> m_FireEmitters;
 public:
 	Engine();
 

@@ -45,11 +45,11 @@ bool Engine::detectCollisions(PlayableCharacter& character)
 					character.spawn(m_LM.getStartPosition(), Constants::GRAVITY);
 					if (m_ArrayLevel[y][x] == 2)
 					{
-
+						m_SM.playFallInFire();
 					}
 					else
 					{
-
+						m_SM.playFallInWater();
 					}
 				}
 			}
