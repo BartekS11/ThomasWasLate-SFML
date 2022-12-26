@@ -49,6 +49,9 @@ private:
 	void draw();
 	void loadLevel();
 
+	//Polimorphic method, can pass bob and thomas
+	bool detectCollisions(PlayableCharacter& character);
+
 public:
 	Engine();
 
