@@ -160,6 +160,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Bob.cpp" />
+    <ClCompile Include="src\DetectCollisions.cpp" />
     <ClCompile Include="src\Draw.cpp" />
     <ClCompile Include="src\Engine.cpp" />
     <ClCompile Include="src\Input.cpp" />
