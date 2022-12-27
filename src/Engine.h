@@ -7,11 +7,14 @@
 #include "LevelManager.h"
 #include "SoundManager.h"
 #include "HUD.h"
+#include "ParticleSystem.h"
 
 class Engine
 {
 private:
 	TextureHolder th;
+
+	ParticleSystem m_Ps;
 
 	Thomas m_Thomas;
 	Bob m_Bob;

@@ -82,4 +82,8 @@ void Engine::update(float dtAsSeconds)
 
 		m_FramesSinceLastHudUpdate = 0;
 	}
+	if (m_Ps.running())
+	{
+		m_Ps.update(dtAsSeconds);
+	}
 }

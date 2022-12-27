@@ -15,6 +15,11 @@ void Engine::draw()
 		m_Window.draw(m_Thomas.getSprite());
 
 		m_Window.draw(m_Bob.getSprite());
+
+		if (m_Ps.running())
+		{
+			m_Window.draw(m_Ps);
+		}
 	}
 	else
 	{
@@ -27,6 +32,11 @@ void Engine::draw()
 
 		m_Window.draw(m_Bob.getSprite());
 		m_Window.draw(m_Thomas.getSprite());
+		
+		if (m_Ps.running())
+		{
+			m_Window.draw(m_Ps);
+		}
 
 		m_Window.setView(m_BGRightView);
 		m_Window.draw(m_BackgroundSprite);
@@ -36,6 +46,11 @@ void Engine::draw()
 
 		m_Window.draw(m_Thomas.getSprite());
 		m_Window.draw(m_Bob.getSprite());
+
+		if (m_Ps.running())
+		{
+			m_Window.draw(m_Ps);
+		}
 	}
 
 	m_Window.setView(m_HudView);

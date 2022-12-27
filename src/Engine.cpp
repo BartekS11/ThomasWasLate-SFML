@@ -22,6 +22,8 @@ Engine::Engine()
 	m_BackgroundSprite.setTexture(m_BackgroundTexture);
 
 	m_TextureTiles = TextureHolder::GetTexture("graphics/tiles_sheet.png");
+
+	m_Ps.init(1000);
 }
 
 void Engine::run()
